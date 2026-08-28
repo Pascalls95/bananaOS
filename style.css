@@ -1,6 +1,25 @@
-div {
-    border: solid 2px black;
-    width: 128px;
-    border-radius: 12px;
-    padding: 16px;
+body {
+   background-image: url(bananaosbackground.jpg);
+   background-size: cover;
+}
+.welcome {
+   border: solid 2px black;
+   width: 500px;
+   border-radius: 12px;
+   padding: 16px;
+   background-color: white;
+ }
+ .menubar {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      width: 100%;
+      backdrop-filter: blur(10px);
+      background-color: rgba(31, 27, 27, 0.25);
+      color: white;
+
+      p {
+         font-family: 'Courier New', Courier, monospace;
+         font-weight: 800px;
+      }
  }
