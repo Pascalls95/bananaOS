@@ -6,13 +6,22 @@
     <body>
         <div class="menubar">
             <p style="margin-left: 20px;">bananaOS</p>
-            <p style="margin-right: 20px;">28/8/26 5:34 PM </p>
+            <p id="timeElement" style="margin-right: 20px;">Time</p>
         </div>
         
         <div class="welcome">
             <h1>Welcome to bananaOS!</h1>
             <p>hello</p>
         </div>
+
+        <script>
+            function updateTime() {
+                var currentTime = new Date().toLocaleString();
+                var timeText = document.querySelector("#timeElement");
+                timeText.innerHTML = currentTime
+            }
+            setInterval(updateTime, 1000);
+        </script>
     </body>
 
 
