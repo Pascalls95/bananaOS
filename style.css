@@ -29,27 +29,60 @@ body {
    padding-top: 4px;
    padding-bottom: 4px;
    border-radius: 12px 12px 0 0;
-   justify-content: center;
+   justify-content: space-between;
    font-family: 'Courier New', Courier, monospace;
  }
  
 .windowbody {
    padding: 16px;
 }
-
- .menubar {
-      display: flex;
-      justify-content: space-between;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      backdrop-filter: blur(10px);
-      background-color: rgba(31, 27, 27, 0.25);
+.closebutton, .appname, .rightspace {
+   flex: 1;                 
+   display: flex;
+   align-items: center;
+}
+.closebutton {
+   span {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: #e63c2d; 
       color: white;
+      font-size: 12px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      margin-left: 8px;
+      color: #e63c2d;
+   }
+   span:hover {
+      color: #91170c;
+   }
+}
 
-      p {
-         font-family: 'Courier New', Courier, monospace;
-         font-weight: 800px;
-      }
+.appname {
+   justify-content: center;       
+}
+
+.rightspace {
+   justify-content: flex-end;     
+}
+ 
+.menubar {
+   display: flex;
+   justify-content: space-between;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   backdrop-filter: blur(10px);
+   background-color: rgba(31, 27, 27, 0.25);
+   color: white;
+
+   p {
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: 800px;
+   }
  }

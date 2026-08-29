@@ -6,12 +6,16 @@
     </head>
     <body>
         <div class="menubar">
-            <p style="margin-left: 20px;">bananaOS</p>
+            <p style="margin-left: 20px;" id="welcomeopen">bananaOS</p>
             <p id="timeElement" style="margin-right: 20px;">Time</p>
         </div>
         
         <div class="window" id="welcome">
-            <p class="windowheader" id="welcomeheader">Welcome</p>
+            <div class="windowheader" id="welcomeheader">
+                <div class="closebutton" id="welcomeclose"><span>x</span></div>
+                <div class="appname">Welcome</div>
+                <div class="rightspace"></div>
+            </div>
             <div class="windowbody">
                 <h1>Welcome to bananaOS!</h1>
                 <p>insert welcome here</p>
