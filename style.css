@@ -2,7 +2,8 @@ body {
    background-image: url(bananaosbackground.jpg);
    background-size: cover;
 }
-#window {
+
+.window {
    border: solid 2px black;
    width: 500px;
    border-radius: 12px;
@@ -11,8 +12,13 @@ body {
    position: absolute;
    top: 50%;
    left: 50%;
-   transform: translate(-50% -50%);
+   transform: translate(-50%, -50%);
  }
+ 
+ .windowheader {
+   text-align: center;
+ }
+ 
  .menubar {
       display: flex;
       justify-content: space-between;
