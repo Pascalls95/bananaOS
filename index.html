@@ -9,19 +9,13 @@
             <p id="timeElement" style="margin-right: 20px;">Time</p>
         </div>
         
-        <div class="welcome">
+        <div id="window">
+            <p id="windowheader">Handle</p>
             <h1>Welcome to bananaOS!</h1>
             <p>hello</p>
         </div>
 
-        <script>
-            function updateTime() {
-                var currentTime = new Date().toLocaleString();
-                var timeText = document.querySelector("#timeElement");
-                timeText.innerHTML = currentTime
-            }
-            setInterval(updateTime, 1000);
-        </script>
+        <script src="script.js"></script>
     </body>
 
 

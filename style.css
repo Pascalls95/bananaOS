@@ -2,12 +2,16 @@ body {
    background-image: url(bananaosbackground.jpg);
    background-size: cover;
 }
-.welcome {
+#window {
    border: solid 2px black;
    width: 500px;
    border-radius: 12px;
    padding: 16px;
    background-color: white;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50% -50%);
  }
  .menubar {
       display: flex;
