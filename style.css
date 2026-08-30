@@ -97,4 +97,22 @@ body {
  #desktopApps {
    padding-top: 64px;
    padding-left: 16px;
+   position: absolute;
+   bottom: 20px;
+   left: 50%;
+   transform: translateX(-50%);
+ }
+ .icon {
+   color: white;
+   width: fit-content;
+   img {
+      width: 64px;
+      height: 64px;
+      border-radius: 14px;
+      transition: 0.3s;
+   }
+   img:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 0 5px 5px blue;
+   }
  }
