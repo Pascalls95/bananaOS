@@ -105,6 +105,7 @@ body {
  .icon {
    color: white;
    width: fit-content;
+   text-align: center;
    img {
       width: 64px;
       height: 64px;
