@@ -1,5 +1,5 @@
 body {
-   background-image: url(bananaosbackground.jpg);
+   background-image: url(bananaosbackground2.png);
    background-size: cover;
 }
 
@@ -27,7 +27,7 @@ body {
    align-items: center;
    padding-top: 4px;
    padding-bottom: 4px;
-   border-radius: 12px 12px 0 0;
+   border-radius: 11px 11px 0 0;
    justify-content: space-between;
    font-family: 'Courier New', Courier, monospace;
  }
@@ -113,6 +113,7 @@ body {
    }
    img:hover {
       transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 0 5px 5px blue;
+      box-shadow: 0 0 5px 5px rgb(255, 238, 0);
+      /*box-shadow: 0 0 5px 5px rgb(93, 28, 177);*/
    }
  }
