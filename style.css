@@ -93,3 +93,8 @@ body {
       text-decoration: underline;
    }
  }
+
+ #desktopApps {
+   padding-top: 64px;
+   padding-left: 16px;
+ }
