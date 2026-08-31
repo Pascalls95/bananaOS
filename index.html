@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Newsreader">
     </head>
     <body>
-        <div class="menubar">
+        <div class="menubar" id="top">
             <p style="margin-left: 20px; cursor: pointer;" id="welcomeopen">bananaOS</p>
             <p id="timeElement" style="margin-right: 20px;">Time</p>
         </div>
@@ -28,10 +28,22 @@
         </div>
         
         <div id="desktopApps">
-            <div class="icon">
+            <div class="icon" onclick="handleIconTap(this)">
                 <img src="appicons/notepadicon.png">
-                <p style="margin: 5px;">Banana Notes</p>
+                <p style="margin: 5px;">NotePad</p>
             </div>
+        
+        <div class="window" id="notes" style="display: none;">
+            <div class="windowheader" id="notesheader">
+                <div class="closebutton"><span id="notesclose">x</span></div>
+                <div class="appname">NotePad</div>
+                <div class="rightspace"></div>
+            </div>
+            <div class="windowbody">
+                <h1>NotePad</h1>
+            </div>
+        </div>
+
         <script src="script.js"></script>
     </body>
 

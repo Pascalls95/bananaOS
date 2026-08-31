@@ -7,6 +7,7 @@ setInterval(updateTime, 1000);
 
 // Make the DIV element draggable:
 dragElement(document.querySelector("#welcome"));
+dragElement(document.querySelector("#notes"));
 
 
 // Step 1: Define a function called `dragElement` that makes an HTML element draggable.
@@ -81,3 +82,64 @@ welcomeScreenClose.addEventListener("click", function() {
 welcomeScreenOpen.addEventListener("click", function() {
   openWindow(welcomeScreen);
 });
+
+var selectedIcon = undefined;
+
+function selectIcon(element) {
+  element.classList.add("selected");
+  selectedIcon = element;
+}
+
+function deselectIcon(element) {
+  element.classList.remove("selected");
+  selectedIcon = undefined;
+}
+
+/*function handleIconTap(element) {
+  if (element.classList.contains("selected")) {
+    deselectIcon(element);
+    openWindow(notesScreen);
+  } else {
+    selectIcon(element);
+  }
+}*/
+
+function handleIconTap(element) {
+    openWindow(notesScreen);
+  } 
+
+
+var notesScreen = document.querySelector("#notes");
+var notesScreenClose = document.querySelector("#notesclose");
+
+notesScreenClose.addEventListener("click", () => closeWindow(notesScreen));
+
+var biggestIndex = 1;
+var topBar = document.querySelector("#top");
+
+function addWindowTapHandling(element) {
+  element.addEventListener("mousedown", () => handleWindowTap(element));
+}
+
+function openWindow(element) {
+  element.style.display = "block";
+  biggestIndex++;
+  element.style.zIndex = biggestIndex;
+  topBar.style.zIndex = biggestIndex + 1;
+}
+
+function handleWindowTap(element) {
+  biggestIndex++;
+  element.style.zIndex = biggestIndex;
+  topBar.style.zIndex = biggestIndex + 1;
+  if (selectedIcon) deselectIcon(selectedIcon);
+}
+
+function initializeWindow(name) {
+  var screen = document.querySelector("#" + name);
+  addWindowTapHandling(screen);
+  makeClosable(name);
+  dragElement(screen);
+}
+
+initializeWindow("notes");

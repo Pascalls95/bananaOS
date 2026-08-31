@@ -102,19 +102,20 @@ body {
    left: 50%;
    transform: translateX(-50%);
  }
- .icon {
-   color: white;
-   width: fit-content;
-   text-align: center;
-   img {
-      width: 64px;
-      height: 64px;
-      border-radius: 14px;
-      transition: 0.3s;
-   }
-   img:hover {
-      transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 0 5px 5px rgb(255, 238, 0);
-      /*box-shadow: 0 0 5px 5px rgb(93, 28, 177);*/
-   }
- }
+.icon {
+  color: white;
+  width: fit-content;
+  text-align: center;
+}
+
+.icon img {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  transition: 0.3s;
+}
+
+.icon img:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 0 5px 5px rgb(255, 238, 0);
+}
