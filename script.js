@@ -138,8 +138,48 @@ function handleWindowTap(element) {
 function initializeWindow(name) {
   var screen = document.querySelector("#" + name);
   addWindowTapHandling(screen);
-  makeClosable(name);
+  /*makeClosable(name);*/
   dragElement(screen);
 }
 
 initializeWindow("notes");
+
+var content = [
+  {
+    title: "Welcome",
+    date: "06/28/2023",
+    content: `
+  <p contenteditable="true">
+    This is a place to write your ideas, points and whatever else you want.
+  </p>
+`
+  }
+];
+
+function setNotesContent(index) {
+  var notesContent = document.querySelector("#notesContent");
+  notesContent.innerHTML = content[index].content;
+}
+
+/*function addToSideBar(index) {
+  var sidebar = document.querySelector("#sidebar");
+  var note = content[index];
+  var newDiv = document.createElement("div");
+
+  newDiv.innerHTML = `
+    <p style="margin: 0px;">${note.title}</p>
+    <p style="font-size: 12px; margin: 0px;">${note.date}</p>
+  `;
+
+  newDiv.addEventListener("click", function() {
+    setNotesContent(index);
+  });
+
+  sidebar.appendChild(newDiv);
+}*/
+
+/*for (let i = 0; i < content.length; i++) {
+  addToSideBar(i);
+}*/
+
+setNotesContent(0);
