@@ -8,6 +8,7 @@ setInterval(updateTime, 1000);
 // Make the DIV element draggable:
 dragElement(document.querySelector("#welcome"));
 dragElement(document.querySelector("#notes"));
+dragElement(document.querySelector("#settings"));
 
 
 // Step 1: Define a function called `dragElement` that makes an HTML element draggable.
@@ -105,8 +106,16 @@ function deselectIcon(element) {
 }*/
 
 function handleIconTap(element) {
+  const appName = element.querySelector("p").innerText;
+
+  if (appName === "NotePad") {
     openWindow(notesScreen);
-  } 
+  }
+
+  if (appName === "Settings") {
+    openWindow(settingsScreen);
+  }
+}
 
 
 var notesScreen = document.querySelector("#notes");
@@ -183,3 +192,8 @@ function setNotesContent(index) {
 }*/
 
 setNotesContent(0);
+
+var settingsScreen = document.querySelector("#settings");
+var settingsScreenClose = document.querySelector("#settingsclose");
+
+settingsScreenClose.addEventListener("click", () => closeWindow(settingsScreen));
