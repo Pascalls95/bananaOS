@@ -101,6 +101,9 @@ body {
    bottom: 20px;
    left: 50%;
    transform: translateX(-50%);
+   gap: 50px;
+   display: flex;
+   flex-wrap: wrap;
  }
 .icon {
   color: white;
@@ -136,4 +139,7 @@ body {
 
 #notesContent p {
    color: white;
+}
+#notes h1 {
+   text-align: center;
 }
