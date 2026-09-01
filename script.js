@@ -106,7 +106,6 @@ function deselectIcon(element) {
 
 function handleIconTap(element) {
     openWindow(notesScreen);
-    openWindow(settingScreen);
   } 
 
 
