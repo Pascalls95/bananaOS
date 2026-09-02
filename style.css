@@ -1,5 +1,5 @@
 body {
-   background-image: url(bananaosbackground2.png);
+   background-image: url(bananaosbackground1.png);
    background-size: cover;
 }
 
@@ -140,6 +140,24 @@ body {
 #notesContent p {
    color: white;
 }
+
 #notes h1 {
    text-align: center;
+}
+
+#wallpaperSelect {
+   background-color: rgba(255,255,255,0.35);
+   font-family: 'Courier New', Courier, monospace;
+   color: white;
+   padding: 6px;
+   border-radius: 8px;
+}
+
+#settings h2 {
+   color: white;
+   font-family: 'Courier New', Courier, monospace;
+}
+
+ p {
+   font-family: Google Sans Code;
 }

@@ -197,3 +197,9 @@ var settingsScreen = document.querySelector("#settings");
 var settingsScreenClose = document.querySelector("#settingsclose");
 
 settingsScreenClose.addEventListener("click", () => closeWindow(settingsScreen));
+
+var wallpaperSelect = document.querySelector("#wallpaperSelect");
+
+wallpaperSelect.addEventListener("change", function() {
+  document.body.style.backgroundImage = `url(${this.value})`;
+});
