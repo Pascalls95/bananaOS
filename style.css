@@ -146,9 +146,9 @@ body {
 }
 
 #wallpaperSelect {
-   background-color: rgba(255,255,255,0.35);
+   background-color: rgba(255,255,255,0.5);
    font-family: 'Courier New', Courier, monospace;
-   color: white;
+   color: rgb(23, 23, 23);
    padding: 6px;
    border-radius: 8px;
 }
