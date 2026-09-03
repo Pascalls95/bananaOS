@@ -116,6 +116,9 @@ function handleIconTap(element) {
   if (appName === "Settings") {
     openWindow(settingsScreen);
   }
+   if (appName === "Calendar") {
+    openWindow(calendarScreen);
+  }
 }
 
 
@@ -123,6 +126,22 @@ var notesScreen = document.querySelector("#notes");
 var notesScreenClose = document.querySelector("#notesclose");
 
 notesScreenClose.addEventListener("click", () => closeWindow(notesScreen));
+
+var settingsScreen = document.querySelector("#settings");
+var settingsScreenClose = document.querySelector("#settingsclose");
+
+settingsScreenClose.addEventListener("click", () => closeWindow(settingsScreen));
+
+var wallpaperSelect = document.querySelector("#wallpaperSelect");
+
+wallpaperSelect.addEventListener("change", function() {
+  document.body.style.backgroundImage = `url(${this.value})`;
+});
+
+var calendarScreen = document.querySelector("#calendar");
+var calendarScreenClose = document.querySelector("#calendarclose");
+
+calendarScreenClose.addEventListener("click", () => closeWindow(calendarScreen));
 
 var biggestIndex = 1;
 var topBar = document.querySelector("#top");
@@ -194,18 +213,17 @@ function setNotesContent(index) {
 
 setNotesContent(0);
 
-var settingsScreen = document.querySelector("#settings");
-var settingsScreenClose = document.querySelector("#settingsclose");
+const monthYearElement = document.getElementById('monthYear');
+const datesElement = document.getElementById('dates');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
 
-settingsScreenClose.addEventListener("click", () => closeWindow(settingsScreen));
+let currentDate = newDate();
 
-var wallpaperSelect = document.querySelector("#wallpaperSelect");
+const currentYear = currentDate.getFullYear();
+const currentMonth = currentDate.getMonth();
 
-wallpaperSelect.addEventListener("change", function() {
-  document.body.style.backgroundImage = `url(${this.value})`;
-});
+const firstDay = new Date(currentYear, currentMonth,0);
+const lastDay = new Date(currentYear, currentMonth + 1, 0);
 
-var calendarScreen = document.querySelector("#calendar");
-var calendarScreenClose = document.querySelector("#calendarclose");
-
-calendarScreenClose.addEventListener("click", () => closeWindow(calendarScreen));
+// name of video: how to make a dynamic calendar using html css & javascript. point in video: 5:54

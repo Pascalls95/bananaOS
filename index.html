@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Newsreader">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans+Code">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     </head>
     <body>
         <div class="menubar" id="top">
@@ -40,7 +41,7 @@
             </div>
 
             <div class="icon" onclick="handleIconTap(this)">
-                <img src="appicons/settingsicon2.png">
+                <img src="appicons/calendaricon.png">
                 <p style="margin: 5px">Calendar</p>
             </div>
         </div>
@@ -74,16 +75,36 @@
                     <option value="wallpapers/bananaosbackground4.jpg">Windows XP</option>
                 </select>
             </div>
-
-        <div class="window" id="calendar" style="display: none;">
+        </div>
+        <div class="window" id="calendar">
             <div class="windowheader" id="calendarheader">
                 <div class="closebutton"><span id="calendarclose">x</span></div>
                 <div class="appname">Calendar</div>
                 <div class="rightspace"></div>
             </div>
             <div class="windowbody">
-                <h1>What will you note down today?</h1>
-                <div id="notesContent"></div>
+                <h1>Calendar</h1>
+                <div class="actualcalendar">
+                    <div class="actualcalendarheader">
+                        <button id="prevBtn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="monthYear" id="monthYear"></div>
+                        <button id="nextBtn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="days">
+                        <div class="day">Mon</div>
+                        <div class="day">Tue</div>
+                        <div class="day">Wed</div>
+                        <div class="day">Thu</div>
+                        <div class="day">Fri</div>
+                        <div class="day">Sat</div>
+                        <div class="day">Sun</div>
+                    </div>
+                    <div class="dates" id="dates"></div>
+                </div>
             </div>
         </div>
 
