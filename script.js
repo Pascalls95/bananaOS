@@ -9,6 +9,7 @@ setInterval(updateTime, 1000);
 dragElement(document.querySelector("#welcome"));
 dragElement(document.querySelector("#notes"));
 dragElement(document.querySelector("#settings"));
+dragElement(document.querySelector("#calendar"));
 
 
 // Step 1: Define a function called `dragElement` that makes an HTML element draggable.
@@ -203,3 +204,8 @@ var wallpaperSelect = document.querySelector("#wallpaperSelect");
 wallpaperSelect.addEventListener("change", function() {
   document.body.style.backgroundImage = `url(${this.value})`;
 });
+
+var calendarScreen = document.querySelector("#calendar");
+var calendarScreenClose = document.querySelector("#calendarclose");
+
+calendarScreenClose.addEventListener("click", () => closeWindow(calendarScreen));

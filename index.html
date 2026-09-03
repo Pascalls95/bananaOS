@@ -38,6 +38,11 @@
                 <img src="appicons/settingsicon2.png">
                 <p style="margin: 5px">Settings</p>
             </div>
+
+            <div class="icon" onclick="handleIconTap(this)">
+                <img src="appicons/settingsicon2.png">
+                <p style="margin: 5px">Calendar</p>
+            </div>
         </div>
 
         <div class="window" id="notes" style="display: none;">
@@ -69,6 +74,18 @@
                     <option value="wallpapers/bananaosbackground4.jpg">Windows XP</option>
                 </select>
             </div>
+
+        <div class="window" id="calendar" style="display: none;">
+            <div class="windowheader" id="calendarheader">
+                <div class="closebutton"><span id="calendarclose">x</span></div>
+                <div class="appname">Calendar</div>
+                <div class="rightspace"></div>
+            </div>
+            <div class="windowbody">
+                <h1>What will you note down today?</h1>
+                <div id="notesContent"></div>
+            </div>
+        </div>
 
         <script src="script.js"></script>
     </body>
