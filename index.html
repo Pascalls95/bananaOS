@@ -30,6 +30,10 @@
         </div>
         
         <div id="desktopApps">
+             <div class="icon" onclick="handleIconTap(this)">
+                <img src="appicons/browsericon.png">
+                <p style="margin: 5px">Browser</p>
+            </div>
             <div class="icon" onclick="handleIconTap(this)">
                 <img src="appicons/notepadicon.png">
                 <p style="margin: 5px;">NotePad</p>
@@ -105,6 +109,15 @@
                     </div>
                     <div class="dates" id="dates"></div>
                 </div>
+            </div>
+        </div>
+         <div class="window" id="browser" style="display: none;">
+            <div class="windowheader" id="browserheader">
+                <div class="closebutton"><span id="browserclose">x</span></div>
+                <div class="appname">Browser</div>
+                <div class="rightspace"></div>
+            </div>
+            <div class="windowbody">
             </div>
         </div>
 
