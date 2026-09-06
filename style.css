@@ -237,3 +237,46 @@ body {
 .date.inactive {
    color: transparent
 }
+
+.browserbody {
+   min-height: 350px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.browserhome {
+   width: 100%;
+   text-align: center;
+}
+
+.browserhome h1 {
+   font-size: 50px;
+   margin-bottom: 30px;
+}
+
+.search {
+   width: 90%;
+   max-width: 450px;
+   margin: auto;
+   display: flex;
+   align-items: center;
+   background-color: rgba(255,255,255,0.1);
+   border-radius: 30px;
+   padding: 5px 8px 5px 16px;
+   color: white;
+}
+
+.search i {
+   margin-right: 10px;
+}
+
+.search input {
+   flex: 1;
+   background: transparent;
+   outline: none;
+   border: none;
+   color: white;
+   font-family: Google Sans Code;
+   font-size: 14px;
+}
