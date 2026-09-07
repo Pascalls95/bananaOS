@@ -10,6 +10,7 @@ dragElement(document.querySelector("#welcome"));
 dragElement(document.querySelector("#notes"));
 dragElement(document.querySelector("#settings"));
 dragElement(document.querySelector("#calendar"));
+dragElement(document.querySelector("#browser"));
 
 
 // Step 1: Define a function called `dragElement` that makes an HTML element draggable.
@@ -119,6 +120,9 @@ function handleIconTap(element) {
    if (appName === "Calendar") {
     openWindow(calendarScreen);
   }
+    if (appName === "Browser") {
+    openWindow(browserScreen);
+  }
 }
 
 
@@ -142,6 +146,11 @@ var calendarScreen = document.querySelector("#calendar");
 var calendarScreenClose = document.querySelector("#calendarclose");
 
 calendarScreenClose.addEventListener("click", () => closeWindow(calendarScreen));
+
+var browserScreen = document.querySelector("#browser");
+var browserScreenClose = document.querySelector("#browserclose");
+
+browserScreenClose.addEventListener("click", () => closeWindow(browserScreen));
 
 var biggestIndex = 1;
 var topBar = document.querySelector("#top");
@@ -171,7 +180,7 @@ function initializeWindow(name) {
   dragElement(screen);
 }
 
-initializeWindow("notes");
+/*initializeWindow("notes");*/
 
 var content = [
   {
@@ -266,4 +275,21 @@ nextBtn.addEventListener('click', () => {
 
 updateCalendar();
 
-// name of video: how to make a dynamic calendar using html css & javascript. point in video: 10 minutes ish
+var search = document.querySelector("#search");
+var searchButton = document.querySelector("#searchButton");
+
+function searchGoogle() {
+  var googleSearch = search.value.trim();
+
+  if (googleSearch !== "") {
+    window.open("https://www.google.com/search?q=" + encodeURIComponent(googleSearch),"_blank");
+  }
+}
+
+searchButton.addEventListener("click", searchGoogle);
+
+search.addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    searchGoogle();
+  }
+});
