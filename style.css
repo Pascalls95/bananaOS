@@ -253,6 +253,7 @@ body {
 .browserhome h1 {
    font-size: 50px;
    margin-bottom: 30px;
+   margin-top: 0;
 }
 
 .search {

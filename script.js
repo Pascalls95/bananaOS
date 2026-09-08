@@ -11,6 +11,7 @@ dragElement(document.querySelector("#notes"));
 dragElement(document.querySelector("#settings"));
 dragElement(document.querySelector("#calendar"));
 dragElement(document.querySelector("#browser"));
+dragElement(document.querySelector("#music"));
 
 
 // Step 1: Define a function called `dragElement` that makes an HTML element draggable.
@@ -123,6 +124,9 @@ function handleIconTap(element) {
     if (appName === "Browser") {
     openWindow(browserScreen);
   }
+    if (appName === "Music") {
+    openWindow(musicScreen);
+  }
 }
 
 
@@ -151,6 +155,11 @@ var browserScreen = document.querySelector("#browser");
 var browserScreenClose = document.querySelector("#browserclose");
 
 browserScreenClose.addEventListener("click", () => closeWindow(browserScreen));
+
+var musicScreen = document.querySelector("#music");
+var musicScreenClose = document.querySelector("#musicclose");
+
+musicScreenClose.addEventListener("click", () => closeWindow(musicScreen));
 
 var biggestIndex = 1;
 var topBar = document.querySelector("#top");
