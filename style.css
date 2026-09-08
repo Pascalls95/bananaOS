@@ -112,9 +112,9 @@ body {
 }
 
 .icon img {
-  width: 64px;
-  height: 64px;
-  border-radius: 18px;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
   transition: 0.3s;
 }
 
