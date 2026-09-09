@@ -104,6 +104,7 @@ body {
    gap: 50px;
    display: flex;
    flex-wrap: wrap;
+   font-size: 15px;
  }
 .icon {
   color: white;
